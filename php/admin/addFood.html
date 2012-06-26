@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../appStyle/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../appStyle/app.css" />
+
+		<script src="../js/jquery-1.7.2.min.js"></script>
+	</head>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// If the values are empty show error message
+			$("#addFood_form").bind("submit", function() {
+				if (
+				$("#foodName").val().length < 1 || 
+				$("#foodPrice").val().length < 1) 
+				{ $("#addFood_error").show();
+				return false;
+				}
+			});
+
+		 	// CHOOSE IMAGE FOR FOOD
+		   	$('#pickImage').click(function(){
+		    $('#imagePath').click();
+		  	});
+
+		 	$("#imagePath").change(function() {
+		    $('#imageName').text($('#imagePath').val());
+		  	});
+		// end of onDocument Ready
+		});
+	</script>
+
+	<body>
+		<!-- ADD FOOD -->
+		<div class="addFood">
+			<form id="addFood_form" method="post" action="addFood.php" enctype="multipart/form-data">
+				<table id="usersTable" border='1'>
+					<tr>
+						<th><h6>Name</h6></th>
+						<th><h6>Price</h6></th>
+						<th><h6>Type</h6></th>
+						<th><h6>Image</h6></th>
+						<th></th>
+					</tr>
+					<tr>
+						<th><input type="text" class="label" id="foodName" name="foodName" placeholder="Name" /></th>
+						<th><input type="text" class="label" id="foodPrice" name="foodPrice" placeholder="Price" /></th>
+						<th>
+							<select id="type" class="selectbox" name="foodType">
+							  <option>FastFood</option>
+							  <option>Dinner main</option>
+							  <option>Desserts</option>
+							  <option>Drinks</option>
+							</select>
+						</th>
+						<th>
+							<input type="button" id="pickImage" class="button" value="Choose an image" style="width:200px; margin: 10px 0px;"/>
+							<h3><label id="imageName" style="width:200px; text-align: center;">Image path</label></h3>
+						</th>
+						<th><input type="submit" class="button" value="Add food" /></th>
+					</tr>
+				</table>
+				<input type="file" name="foodImage" id="imagePath" style="visibility:hidden; width: 1px; height: 1px; display: inline;">
+				<a  id="addFood_error" style=" display: none; background: #2D2D2D; color: #FF2A55; font-weight: bold;">Please enter food name and price</a>
+			</form>
+		</div>
+	</body>
+</html>

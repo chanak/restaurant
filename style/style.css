@@ -1,0 +1,117 @@
+body {
+	background-color:#D3CCB7;
+	background-image:url('loginplate.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+}
+h1 {
+	color: #333;
+	font-size: 100%;
+	font-weight: bold;
+	display:inline;
+}
+h2 {
+	color: #999;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 3px 10px;
+}
+h3 {
+	color: #FF2A55;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 3px 10px;
+}
+h4 {
+    color: #6AC62E;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+a {
+    text-decoration:  none;
+    color: #000;
+}
+#loginDiv {
+	position:absolute;
+	background-color:#D3CCB7;
+	width: 244px;
+	height:110px;
+    /*overflow: hidden; /* important!! turns off scrollbars for the div if clipping occurs*/
+    left:50%;
+    top:50%;
+    margin-left: -128px;
+    margin-top: -55px;
+}
+#registerDiv {
+	width: 244px;
+	height:270px;
+    overflow: hidden; /* important!! turns off scrollbars for the div if clipping occurs*/
+}
+.logo { /* Arrow button design */.
+	color: #4A4B4C;
+	background-color:#4A4B4C;
+	background-image:url('logo.png');
+	background-repeat:no-repeat;
+	background-position:bottom;
+
+	position:absolute;
+    left:1%;
+	
+	width: 200px;
+	min-height:440px;
+	height: 50%;
+	cursor: pointer;
+}
+.logo:before { /* Arrow button in design (drawn by border)*/
+	content: '';
+
+	position: absolute;
+	border-style:solid;
+	border-color:transparent;
+	border-width:100px;
+	border-top-color: #4A4B4C;
+	top: 100%;
+}
+.label {
+	width: 226px;
+	height:20px;
+	background: #333;
+	color : #747862;
+	border: none;
+	padding: 4px 4px;
+	margin: 4px 4px;
+	background-color: #F1EDE0;
+}
+.button {
+	border: none;
+	width: auto;
+	height:30px;
+	padding: 4px 4px;
+	margin: 4px 6px;
+	background-color: #F1EDE0;
+	cursor: pointer;
+
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.button:hover{ 
+	color: #fff;
+	background-color:#6C1B00;
+}
+.basicDiv {
+	border: 3px dashed #b7ad91;
+	margin: 5px 5px 5px 5px;
+	padding: 5px 5px;
+
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+
+    -moz-box-shadow:    inset 0 0 10px  #000000;
+    -webkit-box-shadow: inset 0 0 10px  #000000;
+    box-shadow:         inset 0 0 10px  #000000;
+}
+
